@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.advancedpage">
+<body>
+
+<metal:main fill-slot="main">
+
+    <h1 class="documentFistHeading"
+        tal:attributes="class python: context.show_title and 'documentFistHeading' or 'hiddenStructure'"
+        tal:content="context/Title"
+        />
+
+    <p class="hiddenStructure"
+       tal:attributes="class python: context.show_description and 'documentDescription' or 'hiddenStructure'"
+       tal:content="context/Description"
+       />
+
+    <div tal:replace="structure view/body">The body of the page </div>
+
+</metal:main>
+
+</body>
+</html>
+
