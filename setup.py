@@ -26,6 +26,9 @@ setup(name='collective.advancedpage',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.directives.form',
+          'plone.dexterity',
+          'plone.app.dexterity',
       ],
       entry_points="""
       # -*- Entry points: -*-
