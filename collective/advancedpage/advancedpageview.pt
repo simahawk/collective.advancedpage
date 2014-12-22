@@ -10,11 +10,13 @@
 <metal:main fill-slot="main">
 
     <h1 class="documentFistHeading"
+        tal:condition="context/include_hidden_structure"
         tal:attributes="class python: context.show_title and 'documentFistHeading' or 'hiddenStructure'"
         tal:content="context/Title"
         />
 
     <p class="hiddenStructure"
+       tal:condition="context/include_hidden_structure"
        tal:attributes="class python: context.show_description and 'documentDescription' or 'hiddenStructure'"
        tal:content="context/Description"
        />

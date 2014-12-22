@@ -36,3 +36,10 @@ class IAdvancedPage(form.Schema, IImageScaleTraversable):
         title=_(u'Show description?'),
         default=False,
     )
+
+    include_hidden_structure = schema.Bool(
+        title=_(u'Include hidden structure?'),
+        description=_(u'This will render title and description '
+                      u'for SEO even if not showing them.'),
+        default=False,
+    )
