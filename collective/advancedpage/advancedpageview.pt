@@ -9,14 +9,14 @@
 
 <metal:main fill-slot="main">
 
-    <h1 class="documentFistHeading"
-        tal:condition="context/include_hidden_structure"
-        tal:attributes="class python: context.show_title and 'documentFistHeading' or 'hiddenStructure'"
+    <h1 class="documentFirstHeading"
+        tal:condition="view/render_title"
+        tal:attributes="class python: context.show_title and 'documentFirstHeading' or 'hiddenStructure'"
         tal:content="context/Title"
         />
 
     <p class="hiddenStructure"
-       tal:condition="context/include_hidden_structure"
+       tal:condition="view/render_description"
        tal:attributes="class python: context.show_description and 'documentDescription' or 'hiddenStructure'"
        tal:content="context/Description"
        />

@@ -52,3 +52,14 @@ class View(BrowserView):
             # perhaps image scale doesn't exists
             pass
         return text.decode('utf-8')
+
+    def render_title(self):
+        if self.context.show_title:
+            return True
+        return self.context.include_hidden_structure
+
+    def render_description(self):
+        if self.context.show_description:
+            return True
+        return self.context.include_hidden_structure
+
