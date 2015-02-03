@@ -18,6 +18,7 @@ class IAdvancedPage(form.Schema, IImageScaleTraversable):
     An advanced page with some goodies
     """
 
+    form.primary('body')
     body = schema.Text(
         title=_(u"Body"),
         description=_(
