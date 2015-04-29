@@ -29,6 +29,7 @@ setup(name='collective.advancedpage',
           'plone.directives.form',
           'plone.dexterity',
           'plone.app.dexterity',
+          'collective.z3cform.aceeditorwidget',
       ],
       entry_points="""
       # -*- Entry points: -*-
